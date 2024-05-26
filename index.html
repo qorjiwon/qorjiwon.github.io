@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>소융 E-SPORTS</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/win.css">
+    <link rel="stylesheet" href="./style/Playerbutton.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is the default page.</p>
+    <div class="container">
+        <section id="main">
+            <div class="mainName" style="font-family: 'Kdam Thmor Pro', sans-serif; font-size: 30px; margin-left: 100px; margin-top: 45%">Blind Five mok</div>
+            <div class="buttons">
+                <div>
+                    <button id="withdraw">무르기</button>
+                </div>
+                <div>
+                    <button id="reload">다시하기</button>
+                </div>
+            </div>
+            <!-- <button id="startButton" onclick="startTimer()">시작하기</button> -->
+        </section>
+        <section id="game">
+            <div class="winShow1">Player1 승리! <!--검정-->
+                <div class="trophy">
+                    <img id="trophyImg" src="trophy.png" width="300px" height="300px" alt="">
+                </div>
+            </div>
+            <div class="winShow2">Player2 승리! <!--흰색-->
+                <div class="trophy">
+                    <img id="trophyImg2" src="trophy.png" width="300px" height="300px" alt="">
+                    <div class="score" id="score"></div>
+                </div>
+            </div>
+                <div id="canvasContainer">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+            <div>
+                <div class="timer" id="timer1">3:00</div>
+                <div class="timer" id="timer2">3:00</div>
+                <div class="Player1">
+                    <button id="place-stone-button1" onclick="placeStone()">착수</button>
+                    <button class="red" onclick="changeColorAndSize('red',0)"></button>
+                    <button class="orange" onclick="changeColorAndSize('orange',0)"></button>
+                    <button class="yellow" onclick="changeColorAndSize('yellow',0)"></button>
+                    <button class="green" onclick="changeColorAndSize('green',0)"></button>
+                    <button class="blue" onclick="changeColorAndSize('blue',0)"></button>
+                    <button class="purple" onclick="changeColorAndSize('purple',0)"></button>
+                    <button class="pink" onclick="changeColorAndSize('pink',0)"></button>
+                </div>
+                <div class="Player2">
+                    <button id="place-stone-button2" onclick="placeStone()">착수</button>
+                    <button class="red" onclick="changeColorAndSize('red',1)"></button>
+                    <button class="orange" onclick="changeColorAndSize('orange',1)"></button>
+                    <button class="yellow" onclick="changeColorAndSize('yellow',1)"></button>
+                    <button class="green" onclick="changeColorAndSize('green',1)"></button>
+                    <button class="blue" onclick="changeColorAndSize('blue',1)"></button>
+                    <button class="purple" onclick="changeColorAndSize('purple',1)"></button>
+                    <button class="pink" onclick="changeColorAndSize('pink',1)"></button>
+                </div>
+            <div id="turn"></div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>

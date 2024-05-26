@@ -1,0 +1,107 @@
+body {
+    margin : 0;
+    padding : 0;
+    margin-left: 0px;
+    margin-top: 10px;
+    background-color: #f8fafd;
+    /*
+    background-image: linear-gradient(to right, moccasin 50%, Peachpuff 50%);
+    */
+}
+
+#main{
+    text-align: center;
+    margin-left: 20%;
+}
+
+.container{
+    display: grid;
+    /* border : 4px solid red; */
+    grid-template-columns: 200px 200px 300px;
+    grid-template-areas: 
+    "message message button"
+    "canvas canvas canvas";
+}
+
+canvas {
+    grid-area: canvas;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: block;
+}
+
+#main{
+    width: 80%;
+    text-align: center;
+}
+
+.buttons {
+    grid-area: button;
+    align-self: center;
+    width: 200px;
+    height: 50px;
+    /* border : 2px solid purple; */
+    display: grid;
+    grid-template-columns: 5fr 5fr;
+    grid-template-areas: "withdraw restart";
+    grid-column-gap: 5px;
+    padding:30px;
+}
+
+#withdraw {
+    grid-area: withdraw;
+    top : 0px;
+    left : 20px;
+    width: 90px;
+    height: 60px;
+    font : 18px bold;
+    background-color: aliceblue;
+    border-color: Lightsteelblue;
+    border-radius: 10px;
+}
+
+#reload{
+    grid-area: restart;
+    top : 0px;
+    left : 150px;
+    width: 90px;
+    height: 60px;
+    font : 18px bold;
+    background-color: aliceblue;
+    border-color: Lightsteelblue;
+    border-radius: 10px;
+}
+
+#startButton{
+    margin-left: 30px;
+    width: 200px;
+    height: 100px;
+    font : 18px bold;
+    background-color: aliceblue;
+    border-color: Lightsteelblue;
+    border-radius: 10px;
+}
+
+#canvasContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .timer {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.score {
+    width: 100px;
+    height: 30px;
+    font-size: 100px;
+    margin-left: 70px;
+    color: #f8fafd;
+}

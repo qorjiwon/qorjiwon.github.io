@@ -1,0 +1,80 @@
+.trophy{
+    width: 600px;
+    height: 600px;
+}
+
+#trophyImg{
+    /* border : 1px solid red; */
+    /* animation-name: trophy; */
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+}
+#trophyImg2{
+    /* border : 1px solid red; */
+    /* animation-name: trophy; */
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+}
+
+.winShow1{
+    position: absolute;
+    /* z-index: -1; */
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 630px;
+    height: 570px;
+    background-color: white;
+    text-align: center;
+    padding-top: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 70px;
+    font-weight: bolder;
+
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.winShow2{
+    position: absolute;
+    /* z-index: -1; */
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 630px;
+    height: 570px;
+    background-color: black;
+    text-align: center;
+    padding-top: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 70px;
+    color: white;
+    font-weight: bolder;
+
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes blink{
+    0% {opacity: 0.6; }
+    20% {opacity: 0.8; }
+    40% {opacity: 0.6; }
+    60% {opacity: 0.8; }
+    80% {opacity: 0.6; }
+    100% {opacity: 0.8;  }
+}
+@keyframes trophy {
+    0% {width: 30px; height: 30px;}
+    80% {width: 300px; height: 300px;}
+    100% {width: 30px; height: 30px;}
+}
