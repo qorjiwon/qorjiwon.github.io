@@ -1,0 +1,57 @@
+.WinShow{
+    width: 630px;
+    height: 570px;
+
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding-top: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 70px;
+    font-weight: bolder;
+    
+    animation-name: blink;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+    &.Black {
+        background-color: black;
+        color: white;
+    }
+    
+    &.White {
+        background-color: white;
+    }
+
+    .Trophy{
+        width: 600px;
+        height: 600px;
+
+        img{
+            /* border : 1px solid red; */
+            /* animation-name: trophy; */
+            animation-timing-function: linear;
+            animation-duration: 2s;
+            /* animation-iteration-count: infinite; */
+        }
+    }
+}
+
+@keyframes blink{
+    0% {opacity: 0.6; }
+    20% {opacity: 0.8; }
+    40% {opacity: 0.6; }
+    60% {opacity: 0.8; }
+    80% {opacity: 0.6; }
+    100% {opacity: 0.8;  }
+}
+@keyframes trophy {
+    0% {width: 30px; height: 30px;}
+    80% {width: 300px; height: 300px;}
+    100% {width: 30px; height: 30px;}
+}
