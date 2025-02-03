@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/qorjiwon.github.io/static/css/main.7a4871c8.css",
+    "main.js": "/qorjiwon.github.io/static/js/main.e3c1d324.js",
+    "static/js/453.ad6eb26e.chunk.js": "/qorjiwon.github.io/static/js/453.ad6eb26e.chunk.js",
+    "index.html": "/qorjiwon.github.io/index.html",
+    "main.7a4871c8.css.map": "/qorjiwon.github.io/static/css/main.7a4871c8.css.map",
+    "main.e3c1d324.js.map": "/qorjiwon.github.io/static/js/main.e3c1d324.js.map",
+    "453.ad6eb26e.chunk.js.map": "/qorjiwon.github.io/static/js/453.ad6eb26e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a4871c8.css",
+    "static/js/main.e3c1d324.js"
+  ]
+}
