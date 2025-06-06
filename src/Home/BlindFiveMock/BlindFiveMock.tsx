@@ -30,7 +30,7 @@ const BlindFiveOmok: React.FC = () => {
         }
       }
     }
-  }, [board, pendingMove]);
+  }, [board, pendingMove, winner]);
 
   const drawBoard = (ctx: CanvasRenderingContext2D) => {
     ctx.clearRect(0, 0, CELL_SIZE, CELL_SIZE);
@@ -70,8 +70,21 @@ const BlindFiveOmok: React.FC = () => {
       row.forEach((cell, x) => {
         if (cell.ply !== 0) {
           ctx.beginPath();
-          ctx.arc(x * cellSize + margin, y * cellSize + margin, STONE_RADIUS, 0, Math.PI * 2);
-          ctx.fillStyle = cell.color;
+          ctx.arc(
+            x * cellSize + margin,
+            y * cellSize + margin,
+            STONE_RADIUS,
+            0,
+            Math.PI * 2
+          );
+          // ───────────────────────────────────────────────────────────────────
+          // 게임이 끝난 상태(winner !== null)이면 흑백으로, 아니라면 기존 color 사용
+          const stoneColor =
+            winner !== null
+              ? (cell.ply === 1 ? 'black' : 'white')
+              : cell.color;
+          ctx.fillStyle = stoneColor;
+          // ───────────────────────────────────────────────────────────────────
           ctx.fill();
         }
       });
